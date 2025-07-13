@@ -1,0 +1,80 @@
+/* src/index.css or src/style.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --radius: 0.5rem
+  }
+}
+
+@keyframes fastBgMove {
+  0% {
+    transform: scale(1.1) translateX(0);
+  }
+  50% {
+    transform: scale(1.1) translateX(-40px); 
+  }
+  100% {
+    transform: scale(1.1) translateX(0);
+  }
+}
+
+.animate-fastBgMove {
+  animation: fastBgMove 4s ease-in-out infinite; 
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 1s ease-out forwards;
+}
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+/* styles.css ya index.css me add kro (Tailwind ke baad) */
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip-animation {
+  animation: flip 0.8s ease-in-out forwards;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
